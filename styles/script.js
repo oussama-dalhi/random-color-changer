@@ -5,14 +5,11 @@ const currentContColor = document.getElementById('containercolor');
 const currentbodyColor = document.getElementById('bodycolor');
 const btn = document.getElementById('btn');
 // get random number 0=>255
-const rndColor = () => {
-    let randomNum = Math.floor(Math.random() * 256);
-        return randomNum;
-}
+const rndColor = () => Math.floor(Math.random() * 256);
+
 // set rgb in a helper function
-const getRandomColor = () => {
-    return `rgb(${rndColor()}, ${rndColor()}, ${rndColor()})`;
-};
+const getRandomColor = () => `rgb(${rndColor()}, ${rndColor()}, ${rndColor()})`;
+
 // change body backgroundcolor
 const bodyColor = () => {
     document.body.style.backgroundColor = getRandomColor();
@@ -31,11 +28,17 @@ btn.addEventListener('click', containerColor);
 const showAlret = () => {
     alertText.textContent = 'Lets Goooo!!!';
 }
-btn.addEventListener('click', showAlret);
+btn.addEventListener('click', () => {
+    bodyColor();
+    containerColor();
+    showAlret();
+});
+
 const init = () => {
     bodyColor();
     containerColor();
 }
+
 document.addEventListener('DOMContentLoaded', init);
 
 
