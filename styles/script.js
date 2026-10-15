@@ -1,8 +1,8 @@
 
 const container = document.querySelector('.container');
-const alertText = document.getElementById('alrettext');
+const alertText = document.getElementById('alerttext');
 const currentContColor = document.getElementById('containercolor');
-const currentbodyColor = document.getElementById('bodycolor');
+const currentBodyColor = document.getElementById('bodycolor');
 const btn = document.getElementById('btn');
 // get random number 0=>255
 const rndColor = () => Math.floor(Math.random() * 256);
@@ -13,7 +13,7 @@ const getRandomColor = () => `rgb(${rndColor()}, ${rndColor()}, ${rndColor()})`;
 // change body backgroundcolor
 const bodyColor = () => {
     document.body.style.backgroundColor = getRandomColor();
-    currentbodyColor.textContent = `Body backgroundColor is : 
+    currentBodyColor.textContent = `Body backgroundColor is : 
                                     ${document.body.style.backgroundColor}`;
 }
 btn.addEventListener('click', bodyColor);
