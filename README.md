@@ -25,7 +25,7 @@ A simple web application that generates random RGB colors for the page backgroun
 1. Clone the repository:
 
    ```bash
-   git clone YOUR_REPOSITORY_URL
+   git clone https://github.com/oussama-dalhi/random-color-changer.git
    ```
 
 2. Open the project folder.
